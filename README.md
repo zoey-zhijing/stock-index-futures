@@ -9,6 +9,9 @@
 ## 市场情绪平稳度度量
 
 *市场情绪平稳度 = min{平均最大回撤, 平均最大反向回撤}*
+![image](https://github.com/zoey-zhijing/stock-index-futures/blob/main/figures/50%E5%88%86%E9%92%9F%E5%9B%9E%E6%92%A4%E5%9B%BE.png)
+
+![image](https://github.com/zoey-zhijing/stock-index-futures/blob/main/figures/%E5%9B%9E%E6%92%A4%E4%B8%8E%E5%8F%8D%E5%90%91%E5%9B%9E%E6%92%A4.png)
 
 ## 利用市场情绪平稳度进行交易
 
@@ -46,6 +49,9 @@
 如果情绪平稳度大于阈值，则不开仓。
 
 3. 对于每一天的分钟数据，重复上述操作。
+![image](https://github.com/zoey-zhijing/stock-index-futures/blob/main/figures/%E5%8D%95%E6%AC%A1%E5%BC%80%E4%BB%93%E6%A8%A1%E5%9E%8B%E7%B4%AF%E8%AE%A1%E6%94%B6%E7%9B%8A.png)
+
+![image](https://github.com/zoey-zhijing/stock-index-futures/blob/main/figures/%E5%B9%B3%E7%A8%B3%E5%BA%A6%E6%8C%87%E6%95%B0%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%9B%9E%E6%92%A4.png)
 
 由图可以看出，**该策略累计收益可以达到250%以上，策略回撤控制在5%以内**，表现较好。
 
@@ -76,6 +82,7 @@
 $$
 emotional\_stability\_threshold = 7/10000.0, 8/10000.0, 9 / 10000.0, 10/10000.0, 11/10000.0
 $$
+![image](https://github.com/zoey-zhijing/stock-index-futures/blob/main/figures/%E4%B8%8D%E5%90%8C%E5%BC%80%E4%BB%93%E9%98%88%E5%80%BC.png)
 
 由上图可以看出，除了阈值等于7/10000时表现略差，其余阈值下模型的稳定性较好，阈值=9/10000时表现最好。
 
@@ -84,6 +91,8 @@ $$
 $$
 morning\_sample\_end = 48, 49, 50, 51, 52
 $$
+
+![image](https://github.com/zoey-zhijing/stock-index-futures/blob/main/figures/%E4%B8%8D%E5%90%8C%E5%BC%80%E4%BB%93%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9E%8B%E7%B4%AF%E8%AE%A1%E6%94%B6%E7%9B%8A.png)
 
 由图可以看出，不同开仓时间条件下模型稳定性较好。
 
@@ -94,6 +103,9 @@ $$
 根据研报的分析，在上午与下午趋势相反时，上述一次开仓模型难以很好地捕捉获利机会；多次开仓的交易策略中，上午开仓同原始策略一致，观察开盘后50分钟的收盘价样本，随后决定是否开仓。但是在11：30上午收市时平仓。下午开盘则充分利用上午的数据，观察包括上午收盘数据在内11:12至13:32的数据样本，并在13:33决定下午是否开仓。
 
 #### 模型收益与回撤
+![image](https://github.com/zoey-zhijing/stock-index-futures/blob/main/figures/%E5%A4%9A%E6%AC%A1%E5%BC%80%E4%BB%93%E7%B4%AF%E8%AE%A1%E6%94%B6%E7%9B%8A.png)
+
+![image](https://github.com/zoey-zhijing/stock-index-futures/blob/main/figures/%E5%A4%9A%E6%AC%A1%E5%BC%80%E4%BB%93%E5%9B%9E%E6%92%A4%E6%83%85%E5%86%B5.png)
 
 #### 模型评价
 
@@ -117,21 +129,21 @@ $$
 
 复现的结果表明，由于交易次数的提高，平均交易时间缩短，单次获胜的平均收益率有所下降，但是胜率有所提高，赔率有所下降。虽然最大回撤未出现研报中的改进效果，但是累计收益率和年化收益率有所提升。总的来说，改进后的模型，在样本内的应用效果要好于样本外。
 
-image
+![image](https://github.com/zoey-zhijing/stock-index-futures/blob/main/figures/%E5%8D%95%E6%AC%A1VS%E5%A4%9A%E6%AC%A1%E5%AF%B9%E6%AF%94.png)
 
 对比改进前和改进后的策略累计收益曲线，我们发现，2014年以来，虽然市场的波动情况发生了改变，日内单方向趋势行情发生频率逐渐降低，可是采用多次开仓策略依然保持了累计收益率的上升趋势。
 
 #### 不同时间开仓对比
 
-![image-20221004160233364](C:\Users\seababy\AppData\Roaming\Typora\typora-user-images\image-20221004160233364.png)
+![image](https://github.com/zoey-zhijing/stock-index-futures/blob/main/figures/%E5%A4%9A%E6%AC%A1-%E4%B8%8D%E5%90%8C%E6%97%B6%E9%97%B4.png)
 
-![image-20221004160455196](C:\Users\seababy\AppData\Roaming\Typora\typora-user-images\image-20221004160455196.png)
+![image](https://github.com/zoey-zhijing/stock-index-futures/blob/main/figures/%E5%A4%9A%E6%AC%A1%E4%B8%8B%E5%8D%88%E4%B8%8D%E5%90%8C%E6%97%B6%E9%97%B4%E5%BC%80%E4%BB%93.png)
 
 我们比较不同参数下多次开仓策略每次开仓的收益情况，发现利用该市场平稳度指数进行交易，将上午和下午开仓的累计收益率分开来看，无论是上午还是下午的交易对于开仓时间都表现出很强的参数稳定性。具体来说，**上午开仓时间=50时表现最好，下午开仓时间=34时表现最好**。
 
 #### 不同开仓阈值累计收益对比
 
-![image-20221004160610268](C:\Users\seababy\AppData\Roaming\Typora\typora-user-images\image-20221004160610268.png)
+![image](https://github.com/zoey-zhijing/stock-index-futures/blob/main/figures/%E4%B8%8D%E5%90%8C%E5%BC%80%E4%BB%93%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9E%8B%E7%B4%AF%E8%AE%A1%E6%94%B6%E7%9B%8A.png)
 
 由上图可以看出，对于不同开仓阈值也表现出很强的参数稳定性。**阈值=9/10000时表现最好**。
 
