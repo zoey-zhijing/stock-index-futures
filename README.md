@@ -137,8 +137,6 @@ $$
 
 ![image](https://github.com/zoey-zhijing/stock-index-futures/blob/main/figures/%E5%A4%9A%E6%AC%A1-%E4%B8%8D%E5%90%8C%E6%97%B6%E9%97%B4.png)
 
-![image](https://github.com/zoey-zhijing/stock-index-futures/blob/main/figures/%E5%A4%9A%E6%AC%A1%E4%B8%8B%E5%8D%88%E4%B8%8D%E5%90%8C%E6%97%B6%E9%97%B4%E5%BC%80%E4%BB%93.png)
-
 我们比较不同参数下多次开仓策略每次开仓的收益情况，发现利用该市场平稳度指数进行交易，将上午和下午开仓的累计收益率分开来看，无论是上午还是下午的交易对于开仓时间都表现出很强的参数稳定性。具体来说，**上午开仓时间=50时表现最好，下午开仓时间=34时表现最好**。
 
 #### 不同开仓阈值累计收益对比
