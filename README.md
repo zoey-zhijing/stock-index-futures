@@ -143,7 +143,7 @@ $$
 
 #### 不同开仓阈值累计收益对比
 
-![image](https://github.com/zoey-zhijing/stock-index-futures/blob/main/figures/%E4%B8%8D%E5%90%8C%E5%BC%80%E4%BB%93%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9E%8B%E7%B4%AF%E8%AE%A1%E6%94%B6%E7%9B%8A.png)
+![image](https://github.com/zoey-zhijing/stock-index-futures/blob/main/figures/%E5%A4%9A%E6%AC%A1-%E4%B8%8D%E5%90%8C%E5%BC%80%E4%BB%93%E9%98%88%E5%80%BC%E7%B4%AF%E8%AE%A1%E6%94%B6%E7%9B%8A%E5%AF%B9%E6%AF%94.png)
 
 由上图可以看出，对于不同开仓阈值也表现出很强的参数稳定性。**阈值=9/10000时表现最好**。
 
